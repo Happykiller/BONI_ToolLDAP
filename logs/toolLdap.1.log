@@ -1,0 +1,182 @@
+oct. 02, 2014 6:23:54 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Welcome!
+oct. 02, 2014 6:23:54 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your path for the JAAS configuration file (ex : C:\config.ldap) : 
+oct. 02, 2014 6:26:07 PM com.bonitaSoft.toolLdap.Main message
+INFOS: C:\DATAS\TASKS\Task 032 - ldap\config.ldap
+oct. 02, 2014 6:26:07 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Your path for JAAS file is correct ? (yes or no) - C:\DATAS\TASKS\Task 032 - ldap\config.ldap : 
+oct. 02, 2014 6:26:09 PM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 02, 2014 6:26:09 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your user name for test (ex : myUserName) : 
+oct. 02, 2014 6:29:00 PM com.bonitaSoft.toolLdap.Main message
+INFOS: antoine.mottier
+oct. 02, 2014 6:29:00 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Your user name for test is correct ? (yes or no) - antoine.mottier : 
+oct. 02, 2014 6:29:03 PM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 02, 2014 6:29:03 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your password for test (ex : myPassword) : 
+oct. 02, 2014 6:29:09 PM com.bonitaSoft.toolLdap.Main message
+INFOS: bonita2014
+oct. 02, 2014 6:29:09 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Your password for test is correct ? (yes or no) - bonita2014 : 
+oct. 02, 2014 6:29:11 PM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 02, 2014 6:29:11 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your id of conf LDAP (ex : myConf) : 
+oct. 02, 2014 6:29:16 PM com.bonitaSoft.toolLdap.Main message
+INFOS: test1
+oct. 02, 2014 6:29:16 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Your id of conf LDAP is correct ? (yes or no) - test1 : 
+oct. 02, 2014 6:29:17 PM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 02, 2014 6:29:17 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Error : Aucun LoginModule configuré pour y
+oct. 02, 2014 6:30:54 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Welcome!
+oct. 02, 2014 6:30:54 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your path for the JAAS configuration file (ex : C:\config.ldap) : 
+oct. 02, 2014 6:30:58 PM com.bonitaSoft.toolLdap.Main message
+INFOS: C:\DATAS\TASKS\Task 032 - ldap\config.ldap
+oct. 02, 2014 6:30:58 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Your path for JAAS file is correct ? (yes or no) - C:\DATAS\TASKS\Task 032 - ldap\config.ldap : 
+oct. 02, 2014 6:31:00 PM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 02, 2014 6:31:00 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your user name for test (ex : myUserName) : 
+oct. 02, 2014 6:31:05 PM com.bonitaSoft.toolLdap.Main message
+INFOS: antoine.mottier
+oct. 02, 2014 6:31:05 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Your user name for test is correct ? (yes or no) - antoine.mottier : 
+oct. 02, 2014 6:31:07 PM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 02, 2014 6:31:07 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your password for test (ex : myPassword) : 
+oct. 02, 2014 6:31:11 PM com.bonitaSoft.toolLdap.Main message
+INFOS: bonita2014
+oct. 02, 2014 6:31:11 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Your password for test is correct ? (yes or no) - bonita2014 : 
+oct. 02, 2014 6:31:14 PM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 02, 2014 6:31:14 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your id of conf LDAP (ex : myConf) : 
+oct. 02, 2014 6:31:20 PM com.bonitaSoft.toolLdap.Main message
+INFOS: test1
+oct. 02, 2014 6:31:20 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Your id of conf LDAP is correct ? (yes or no) - test1 : 
+oct. 02, 2014 6:31:22 PM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 02, 2014 6:31:22 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Error : Aucun LoginModule configuré pour y
+oct. 02, 2014 6:34:29 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Welcome!
+oct. 02, 2014 6:34:29 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your path for the JAAS configuration file (ex : C:\config.ldap) : 
+oct. 02, 2014 6:34:34 PM com.bonitaSoft.toolLdap.Main message
+INFOS: C:\DATAS\TASKS\Task 032 - ldap\config.ldap
+oct. 02, 2014 6:34:34 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Your path for JAAS file is correct ? (yes or no) - C:\DATAS\TASKS\Task 032 - ldap\config.ldap : 
+oct. 02, 2014 6:34:36 PM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 02, 2014 6:34:36 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your user name for test (ex : myUserName) : 
+oct. 02, 2014 6:34:48 PM com.bonitaSoft.toolLdap.Main message
+INFOS: antoine.mottier
+oct. 02, 2014 6:34:48 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Your user name for test is correct ? (yes or no) - antoine.mottier : 
+oct. 02, 2014 6:34:50 PM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 02, 2014 6:34:50 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your password for test (ex : myPassword) : 
+oct. 02, 2014 6:34:54 PM com.bonitaSoft.toolLdap.Main message
+INFOS: bonita2014
+oct. 02, 2014 6:34:54 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Your password for test is correct ? (yes or no) - bonita2014 : 
+oct. 02, 2014 6:34:56 PM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 02, 2014 6:34:56 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your id of conf LDAP (ex : myConf) : 
+oct. 02, 2014 6:35:10 PM com.bonitaSoft.toolLdap.Main message
+INFOS: test1
+oct. 02, 2014 6:35:10 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Your id of conf LDAP is correct ? (yes or no) - test1 : 
+oct. 02, 2014 6:35:12 PM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 02, 2014 6:35:12 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Error : Aucun LoginModule configuré pour y
+oct. 02, 2014 6:37:16 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Welcome!
+oct. 02, 2014 6:37:16 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your path for the JAAS configuration file (ex : C:\config.ldap) : 
+oct. 02, 2014 6:37:49 PM com.bonitaSoft.toolLdap.Main message
+INFOS: C:\DATAS\TASKS\Task 032 - ldap\config.ldap
+oct. 02, 2014 6:37:49 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Your path for JAAS file is correct ? (yes or no) - C:\DATAS\TASKS\Task 032 - ldap\config.ldap : 
+oct. 02, 2014 6:37:51 PM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 02, 2014 6:37:51 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your user name for test (ex : myUserName) : 
+oct. 02, 2014 6:37:57 PM com.bonitaSoft.toolLdap.Main message
+INFOS: antoine.mottier
+oct. 02, 2014 6:37:57 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Your user name for test is correct ? (yes or no) - antoine.mottier : 
+oct. 02, 2014 6:37:59 PM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 02, 2014 6:37:59 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your password for test (ex : myPassword) : 
+oct. 02, 2014 6:38:05 PM com.bonitaSoft.toolLdap.Main message
+INFOS: bonita2014
+oct. 02, 2014 6:38:05 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Your password for test is correct ? (yes or no) - bonita2014 : 
+oct. 02, 2014 6:38:07 PM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 02, 2014 6:38:07 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your id of conf LDAP (ex : myConf) : 
+oct. 02, 2014 6:38:13 PM com.bonitaSoft.toolLdap.Main message
+INFOS: test1
+oct. 02, 2014 6:38:13 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Your id of conf LDAP is correct ? (yes or no) - test1 : 
+oct. 02, 2014 6:38:14 PM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 02, 2014 6:38:15 PM com.bonitaSoft.toolLdap.Main message
+INFOS: Error : Aucun LoginModule configuré pour y
+oct. 03, 2014 9:58:17 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Welcome!
+oct. 03, 2014 9:58:17 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your path for the JAAS configuration file (ex : C:\config.ldap) : 
+oct. 03, 2014 9:58:41 AM com.bonitaSoft.toolLdap.Main message
+INFOS: C:\DATAS\TASKS\Task 032 - ldap\config.ldap
+oct. 03, 2014 9:58:41 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Your path for JAAS file is correct ? (yes or no) - C:\DATAS\TASKS\Task 032 - ldap\config.ldap : 
+oct. 03, 2014 9:58:43 AM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 03, 2014 9:58:43 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your user name for test (ex : myUserName) : 
+oct. 03, 2014 9:58:54 AM com.bonitaSoft.toolLdap.Main message
+INFOS: antoine.mottier
+oct. 03, 2014 9:58:54 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Your user name for test is correct ? (yes or no) - antoine.mottier : 
+oct. 03, 2014 9:58:59 AM com.bonitaSoft.toolLdap.Main message
+INFOS: bonita2014
+oct. 03, 2014 9:58:59 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your user name for test (ex : myUserName) : 
+oct. 03, 2014 9:59:04 AM com.bonitaSoft.toolLdap.Main message
+INFOS: null
+oct. 03, 2014 9:59:06 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Welcome!
+oct. 03, 2014 9:59:06 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your path for the JAAS configuration file (ex : C:\config.ldap) : 
+oct. 03, 2014 9:59:09 AM com.bonitaSoft.toolLdap.Main message
+INFOS: C:\DATAS\TASKS\Task 032 - ldap\config.ldap
+oct. 03, 2014 9:59:09 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Your path for JAAS file is correct ? (yes or no) - C:\DATAS\TASKS\Task 032 - ldap\config.ldap : 
+oct. 03, 2014 9:59:11 AM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 03, 2014 9:59:11 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your user name for test (ex : myUserName) : 
+oct. 03, 2014 9:59:17 AM com.bonitaSoft.toolLdap.Main message
+INFOS: bonita2014
+oct. 03, 2014 9:59:17 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Your user name for test is correct ? (yes or no) - bonita2014 : 
