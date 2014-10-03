@@ -78,3 +78,95 @@ oct. 03, 2014 10:40:08 AM com.bonitaSoft.toolLdap.Main message
 INFOS: You want to retry ? : 
 oct. 03, 2014 10:40:16 AM com.bonitaSoft.toolLdap.Main message
 INFOS: n
+oct. 03, 2014 10:58:44 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Welcome!
+oct. 03, 2014 10:58:44 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your path for the JAAS configuration file (ex : C:\config.ldap) : 
+oct. 03, 2014 10:59:11 AM com.bonitaSoft.toolLdap.Main message
+INFOS: C:\DATAS\TASKS\Task 032 - ldap\config.ldap
+oct. 03, 2014 10:59:11 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Your path for JAAS file is correct ? (yes or no) - C:\DATAS\TASKS\Task 032 - ldap\config.ldap : 
+oct. 03, 2014 10:59:30 AM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 03, 2014 10:59:30 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your user name for test (ex : myUserName) : 
+oct. 03, 2014 10:59:54 AM com.bonitaSoft.toolLdap.Main message
+INFOS: antoine.mottier
+oct. 03, 2014 10:59:54 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Your user name for test is correct ? (yes or no) - antoine.mottier : 
+oct. 03, 2014 10:59:55 AM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 03, 2014 10:59:55 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your password for test (ex : myPassword) : 
+oct. 03, 2014 11:00:02 AM com.bonitaSoft.toolLdap.Main message
+INFOS: bonita2014
+oct. 03, 2014 11:00:02 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Your password for test is correct ? (yes or no) - bonita2014 : 
+oct. 03, 2014 11:00:04 AM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 03, 2014 11:00:04 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your id of conf LDAP (ex : myConf) : 
+oct. 03, 2014 11:00:08 AM com.bonitaSoft.toolLdap.Main message
+INFOS: test1
+oct. 03, 2014 11:00:08 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Your id of conf LDAP is correct ? (yes or no) - test1 : 
+oct. 03, 2014 11:00:09 AM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 03, 2014 11:00:10 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Login success.
+oct. 03, 2014 11:00:10 AM com.bonitaSoft.toolLdap.Main message
+INFOS: You want to retry ? : 
+oct. 03, 2014 11:00:39 AM com.bonitaSoft.toolLdap.Main message
+INFOS: n
+oct. 03, 2014 11:01:02 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Welcome!
+oct. 03, 2014 11:01:02 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your path for the JAAS configuration file (ex : C:\config.ldap) : 
+oct. 03, 2014 11:01:05 AM com.bonitaSoft.toolLdap.Main message
+INFOS: aaafgd
+oct. 03, 2014 11:01:05 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Your path for JAAS file is wrong, try again ? (yes or no) - aaafgd : 
+oct. 03, 2014 11:01:11 AM com.bonitaSoft.toolLdap.Main message
+INFOS: yes
+oct. 03, 2014 11:01:11 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your path for the JAAS configuration file (ex : C:\config.ldap) : 
+oct. 03, 2014 11:01:27 AM com.bonitaSoft.toolLdap.Main message
+INFOS: C:\DATAS\TASKS\Task 032 - ldap\config.ldap
+oct. 03, 2014 11:01:27 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Your path for JAAS file is correct ? (yes or no) - C:\DATAS\TASKS\Task 032 - ldap\config.ldap : 
+oct. 03, 2014 11:01:30 AM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 03, 2014 11:01:30 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your user name for test (ex : myUserName) : 
+oct. 03, 2014 11:01:53 AM com.bonitaSoft.toolLdap.Main message
+INFOS: qhk
+oct. 03, 2014 11:01:53 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Your user name for test is correct ? (yes or no) - qhk : 
+oct. 03, 2014 11:01:55 AM com.bonitaSoft.toolLdap.Main message
+INFOS: fswxhklj
+oct. 03, 2014 11:01:55 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your user name for test (ex : myUserName) : 
+oct. 03, 2014 11:02:01 AM com.bonitaSoft.toolLdap.Main message
+INFOS: sfwx
+oct. 03, 2014 11:02:01 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Your user name for test is correct ? (yes or no) - sfwx : 
+oct. 03, 2014 11:02:02 AM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 03, 2014 11:02:02 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your password for test (ex : myPassword) : 
+oct. 03, 2014 11:02:03 AM com.bonitaSoft.toolLdap.Main message
+INFOS: sfhlk
+oct. 03, 2014 11:02:03 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Your password for test is correct ? (yes or no) - sfhlk : 
+oct. 03, 2014 11:02:07 AM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 03, 2014 11:02:07 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Please indicate your id of conf LDAP (ex : myConf) : 
+oct. 03, 2014 11:02:21 AM com.bonitaSoft.toolLdap.Main message
+INFOS: test1
+oct. 03, 2014 11:02:21 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Your id of conf LDAP is correct ? (yes or no) - test1 : 
+oct. 03, 2014 11:02:26 AM com.bonitaSoft.toolLdap.Main message
+INFOS: y
+oct. 03, 2014 11:02:26 AM com.bonitaSoft.toolLdap.Main message
+INFOS: Login fail, error : Cannot bind to LDAP server
