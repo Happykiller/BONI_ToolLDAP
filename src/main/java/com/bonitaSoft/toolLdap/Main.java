@@ -57,7 +57,7 @@ public class Main {
             localStorage.set("password", password);
         }
 
-        String idConf = getInfo("id of conf LDAP", "myConf");
+        String idConf = getInfo("JAAS context name", "myConf");
 
         if (idConf == null) {
             return false;
@@ -70,15 +70,14 @@ public class Main {
         try {
             LoginContext lc = new LoginContext(idConf, new TestCallbackHandler(userName, password));
             lc.login();
+            message("Login success.", false, true);
         } catch (LoginException e) {
             message("Login fail, error : "+e.getMessage(), false, true);
-            return false;
+            logger.severe(e.getCause().toString());
         }
 
-        message("Login success.", false, true);
-
         String strRetourYN = message("You want to retry ? : ", true, true);
-        if (strRetourYN.equals("yes")&&(strRetourYN.equals("y"))) {
+        if (strRetourYN.equals("yes")||(strRetourYN.equals("y"))) {
             Boolean boolRetour = scenario();
         }
 
@@ -143,7 +142,7 @@ public class Main {
         }
 
         try {
-            Handler fh = new FileHandler("logs/toolLdap.%g.log", 10000, 4, true);
+            Handler fh = new FileHandler("logs/toolLdap.%g.log", 9000000, 4, true);
             fh.setFormatter(new SimpleFormatter());
             logger.addHandler(fh);
         } catch (IOException e) {
@@ -156,6 +155,7 @@ public class Main {
         message("Starting " + strAppName, false, false);
         message("-----------------------", false, false);
         message("Welcome!", false, true);
+        message("Interuption as possible with Ctrl+C.", false, true);
     }
 
     public static void finaly() {
