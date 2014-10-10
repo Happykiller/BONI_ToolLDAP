@@ -46,3 +46,11 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Eclipse files
+.classpath
+.project
+.settings
+
+# LDAP tool application log folder
+logs
