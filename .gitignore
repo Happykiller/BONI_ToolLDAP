@@ -1,4 +1,7 @@
-.idea/*
+target/
 target/*
+.idea/
+.idea/*
+logs/
 logs/*
-toolLdap.iml
+*.iml
