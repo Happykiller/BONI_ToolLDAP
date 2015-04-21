@@ -35,10 +35,10 @@ public class Main {
         String pathJassFile = getPathJassFile();
 
         if (pathJassFile == null) {
+            message("Fail, impossible to load jass file.", false, true);
             return false;
         } else {
             localStorage.set("pathJassFile", pathJassFile);
-
         }
 
         String userName = getInfo("user name for test", "myUserName");
@@ -72,12 +72,11 @@ public class Main {
             lc.login();
             message("Login success.", false, true);
         } catch (LoginException e) {
-            message("Login fail, error : "+e.getMessage(), false, true);
-            logger.severe(e.getCause().toString());
+            message("Login fail, error : " + e.getMessage(), false, true);
         }
 
-        String strRetourYN = message("You want to retry ? : ", true, true);
-        if (strRetourYN.equals("yes")||(strRetourYN.equals("y"))) {
+        String strRetourYN = message("You want to retry ? (yes by default or no) : ", true, true);
+        if (strRetourYN.equals("yes")||(strRetourYN.equals("y"))||(strRetourYN.isEmpty())) {
             Boolean boolRetour = scenario();
         }
 
@@ -91,13 +90,13 @@ public class Main {
 
         File f = new File(pathJassFile);
         if (f.exists()) {
-            String strRetour = message("Your path for JAAS file is correct ? (yes or no) - " + pathJassFile + " : ", true, true);
-            if (!strRetour.equals("yes")&&(!strRetour.equals("y"))) {
+            String strRetourYN = message("Your path for JAAS file is correct ? (yes by default or no) - " + pathJassFile + " : ", true, true);
+            if (!strRetourYN.equals("yes")&&(!strRetourYN.equals("y"))&&(!strRetourYN.isEmpty())) {
                 pathJassFile = getPathJassFile();
             }
         } else {
-            String strRetour = message("Your path for JAAS file is wrong, try again ? (yes or no) - " + pathJassFile + " : ", true, true);
-            if (strRetour.equals("yes")||(strRetour.equals("y"))) {
+            String strRetourYN = message("Your path for JAAS file is wrong, try again ? (yes by default or no) - " + pathJassFile + " : ", true, true);
+            if (strRetourYN.equals("yes")||(strRetourYN.equals("y"))&&(!strRetourYN.isEmpty())) {
                 pathJassFile = getPathJassFile();
             } else {
                 pathJassFile = null;
@@ -113,13 +112,13 @@ public class Main {
         strRetour = message("Please indicate your " + label + " (ex : " + example + ") : ", true, true);
 
         if (!strRetour.equals("")) {
-            String strRetourYN = message("Your " + label + " is correct ? (yes or no) - " + strRetour + " : ", true, true);
-            if (!strRetourYN.equals("yes")&&(!strRetourYN.equals("y"))) {
+            String strRetourYN = message("Your " + label + " is correct ? (yes by default or no) - " + strRetour + " : ", true, true);
+            if (!strRetourYN.equals("yes")&&(!strRetourYN.equals("y"))&&(!strRetourYN.isEmpty())) {
                 strRetour = getInfo(label, example);
             }
         } else {
-            String strRetourYN = message("Your user name is wrong, try again ? (yes or no) - " + strRetour + " : ", true, true);
-            if (strRetourYN.equals("yes")||(strRetourYN.equals("y"))) {
+            String strRetourYN = message("Your user name is wrong, try again ? (yes by default or no) - " + strRetour + " : ", true, true);
+            if (strRetourYN.equals("yes")||(strRetourYN.equals("y"))&&(!strRetourYN.isEmpty())) {
                 strRetour = getInfo(label, example);
             } else {
                 strRetour = null;
