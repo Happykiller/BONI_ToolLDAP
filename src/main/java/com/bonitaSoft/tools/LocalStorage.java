@@ -10,19 +10,19 @@ public class LocalStorage {
     protected HashMap localStorage;
 
     public LocalStorage() {
-        this.localStorage = new HashMap<String, Object>();
+        this.localStorage = new HashMap<String, String>();
     }
 
-    public void set(String key, Object value) {
+    public void set(String key, String value) {
        this.localStorage.put(key,value);
     }
 
-    public Object get(String key) {
-        return this.get(key, null);
+    public String get(String key) {
+        return this.get(key, "");
     }
 
-    public Object get(String key, Object defaultValue) {
-        Object valReturn = this.localStorage.get(key);
+    public String get(String key, String defaultValue) {
+        String valReturn = (String) this.localStorage.get(key);
 
         if((valReturn == null) && (defaultValue != null)){
             this.set(key, defaultValue);

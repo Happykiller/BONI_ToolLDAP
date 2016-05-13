@@ -1,4 +1,4 @@
 @ECHO ON
-java -jar bonitaToolLdap-1.1.jar
+java -jar bonitaToolLdap-1.2.jar
 ECHO "Click enter to exit"
 pause

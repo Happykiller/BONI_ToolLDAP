@@ -8,11 +8,11 @@ import javax.security.auth.callback.NameCallback;
 import javax.security.auth.callback.PasswordCallback;
 import javax.security.auth.callback.UnsupportedCallbackException;
 
-public class TestCallbackHandler implements CallbackHandler {
+public class ToolCallbackHandler implements CallbackHandler {
 	String name;
 	String password;
 
-	public TestCallbackHandler(String name, String password) {
+	public ToolCallbackHandler(String name, String password) {
 		this.name = name;
 		this.password = password;
 	}

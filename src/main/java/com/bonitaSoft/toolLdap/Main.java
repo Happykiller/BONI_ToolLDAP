@@ -1,11 +1,13 @@
 package com.bonitaSoft.toolLdap;
 
 import com.bonitaSoft.tools.LocalStorage;
-import com.bonitaSoft.tools.TestCallbackHandler;
+import com.bonitaSoft.tools.ToolCallbackHandler;
 
+import javax.security.auth.login.Configuration;
 import javax.security.auth.login.LoginContext;
 import javax.security.auth.login.LoginException;
 import java.io.*;
+import java.util.Scanner;
 import java.util.logging.*;
 
 /**
@@ -15,13 +17,11 @@ public class Main {
 
     protected static Logger logger = Logger.getLogger("com.bonitaSoft.toolLdap.Main");
 
-    protected static Console console = System.console();
-
-    private static final String fNEW_LINE = System.getProperty("line.separator");
-
     private static final String strAppName = "BonitaSoft LDAP tool testing";
 
     private static LocalStorage localStorage = new LocalStorage();
+
+    private static boolean idem = false;
 
     public static void main(String[] args) {
         init();
@@ -32,51 +32,93 @@ public class Main {
     }
 
     public static Boolean scenario() {
-        String pathJassFile = getPathJassFile();
+        if(!idem){
+            message("-----------------------", false, false);
+            message("Infos:", false, false);
 
-        if (pathJassFile == null) {
-            message("Fail, impossible to load jass file.", false, true);
-            return false;
-        } else {
-            localStorage.set("pathJassFile", pathJassFile);
+            //---------------------------
+            //JAAS FILE
+            String pathJassFile = getPathJassFile();
+            System.setProperty("java.security.auth.login.config", pathJassFile);
+
+            if (pathJassFile == null) {
+                message("Fail, impossible to load jass file.", false, true);
+                return false;
+            } else {
+                localStorage.set("pathJassFile", pathJassFile);
+            }
+
+            //---------------------------
+            //USER NAME
+            String userName = getInfo("user name for test", "myUserName");
+
+            if (userName == null) {
+                return false;
+            } else {
+                localStorage.set("userName", userName);
+            }
+
+            //---------------------------
+            //PASSWORD
+            String password = getInfo("password for test", "myPassword");
+
+            if (password == null) {
+                return false;
+            } else {
+                localStorage.set("password", password);
+            }
+
+            //---------------------------
+            //CONF
+            String idConf = getInfo("JAAS context name", "BonitaAuthentication-1");
+
+            if (idConf == null) {
+                return false;
+            } else {
+                localStorage.set("idConf", idConf);
+            }
+
+            message("-----------------------", false, false);
+            message("Context:", false, false);
+            message("- jaas file: "+pathJassFile, false, false);
+            message("- user name: "+userName, false, false);
+            message("- user password: "+password, false, false);
+            message("- JAAS context name: "+idConf, false, false);
         }
 
-        String userName = getInfo("user name for test", "myUserName");
-
-        if (userName == null) {
-            return false;
-        } else {
-            localStorage.set("userName", userName);
-        }
-
-        String password = getInfo("password for test", "myPassword");
-
-        if (password == null) {
-            return false;
-        } else {
-            localStorage.set("password", password);
-        }
-
-        String idConf = getInfo("JAAS context name", "myConf");
-
-        if (idConf == null) {
-            return false;
-        } else {
-            localStorage.set("idConf", idConf);
-        }
-
-        System.setProperty("java.security.auth.login.config", pathJassFile);
-
+        message("-----------------------", false, false);
+        LoginContext lc = null;
         try {
-            LoginContext lc = new LoginContext(idConf, new TestCallbackHandler(userName, password));
+            Configuration config = java.security.AccessController.doPrivileged(new java.security.PrivilegedAction<Configuration>() {
+                public Configuration run() {
+                    return Configuration.getConfiguration();
+                }
+            });
+            config.refresh();
+            lc = new LoginContext(localStorage.get("idConf"), new ToolCallbackHandler(localStorage.get("userName"), localStorage.get("password")));
             lc.login();
+            message("Response:", false, false);
             message("Login success.", false, true);
         } catch (LoginException e) {
+            message("Response:", false, false);
             message("Login fail, error : " + e.getMessage(), false, true);
+        }finally {
+            if(lc != null){
+                try {
+                    lc.logout();
+                } catch (LoginException e) {
+                    e.printStackTrace();
+                }
+            }
         }
 
-        String strRetourYN = message("You want to retry ? (yes by default or no) : ", true, true);
-        if (strRetourYN.equals("yes")||(strRetourYN.equals("y"))||(strRetourYN.isEmpty())) {
+        //LOOP
+        idem = false;
+        String strRetourYN = message("You want to retry ? (idem by default, yes or no) : ", true, true);
+        if (strRetourYN.equals("idem")||(strRetourYN.isEmpty())) {
+            idem = true;
+            Boolean boolRetour = scenario();
+        }else if(strRetourYN.equals("yes")||(strRetourYN.equals("y"))){
             Boolean boolRetour = scenario();
         }
 
@@ -89,12 +131,7 @@ public class Main {
         pathJassFile = message("Please indicate your path for the JAAS configuration file (ex : C:\\config.ldap) : ", true, true);
 
         File f = new File(pathJassFile);
-        if (f.exists()) {
-            String strRetourYN = message("Your path for JAAS file is correct ? (yes by default or no) - " + pathJassFile + " : ", true, true);
-            if (!strRetourYN.equals("yes")&&(!strRetourYN.equals("y"))&&(!strRetourYN.isEmpty())) {
-                pathJassFile = getPathJassFile();
-            }
-        } else {
+        if (!f.exists()) {
             String strRetourYN = message("Your path for JAAS file is wrong, try again ? (yes by default or no) - " + pathJassFile + " : ", true, true);
             if (strRetourYN.equals("yes")||(strRetourYN.equals("y"))&&(!strRetourYN.isEmpty())) {
                 pathJassFile = getPathJassFile();
@@ -111,12 +148,7 @@ public class Main {
 
         strRetour = message("Please indicate your " + label + " (ex : " + example + ") : ", true, true);
 
-        if (!strRetour.equals("")) {
-            String strRetourYN = message("Your " + label + " is correct ? (yes by default or no) - " + strRetour + " : ", true, true);
-            if (!strRetourYN.equals("yes")&&(!strRetourYN.equals("y"))&&(!strRetourYN.isEmpty())) {
-                strRetour = getInfo(label, example);
-            }
-        } else {
+        if (strRetour.equals("")) {
             String strRetourYN = message("Your user name is wrong, try again ? (yes by default or no) - " + strRetour + " : ", true, true);
             if (strRetourYN.equals("yes")||(strRetourYN.equals("y"))&&(!strRetourYN.isEmpty())) {
                 strRetour = getInfo(label, example);
@@ -130,11 +162,20 @@ public class Main {
 
     public static void init() {
         File theDir = new File("logs");
-
         // if the directory does not exist, create it
         if (!theDir.exists()) {
             try {
                 theDir.mkdir();
+            } catch (SecurityException se) {
+                //handle it
+            }
+        }
+
+        File tmpDir = new File("tmps");
+        // if the directory does not exist, create it
+        if (!tmpDir.exists()) {
+            try {
+                tmpDir.mkdir();
             } catch (SecurityException se) {
                 //handle it
             }
@@ -167,40 +208,17 @@ public class Main {
         String strRetour = null;
         if (retour) {
             logger.info(msg);
-            strRetour = console.readLine(msg);
+            System.out.print(msg);
+            Scanner scanner = new Scanner(System.in);
+            strRetour = scanner.nextLine();
             logger.info(strRetour);
         } else {
-            console.printf(msg);
-            console.printf(fNEW_LINE);
+            System.out.println(msg);
             if (inLog) {
                 logger.info(msg);
             }
         }
 
         return strRetour;
-    }
-
-    private static String readFile(String file) {
-        try {
-            BufferedReader reader = null;
-            reader = new BufferedReader(new FileReader(file));
-
-            String line = null;
-            StringBuilder stringBuilder = new StringBuilder();
-            String ls = System.getProperty("line.separator");
-
-            while ((line = reader.readLine()) != null) {
-                stringBuilder.append(line);
-                stringBuilder.append(ls);
-            }
-
-            return stringBuilder.toString();
-        } catch (FileNotFoundException e) {
-            message("Error : "+e.getMessage(), false, true);
-            return null;
-        } catch (IOException e) {
-            message("Error : "+e.getMessage(), false, true);
-            return null;
-        }
     }
 }
